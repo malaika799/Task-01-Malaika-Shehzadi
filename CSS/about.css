@@ -1,0 +1,312 @@
+/* ============================================
+   ABOUT PAGE STYLES
+   ============================================ */
+
+.page-hero {
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--section-py) + 4rem) 0 var(--section-py);
+  background: 
+    radial-gradient(ellipse 600px 400px at 90% 30%, rgba(160,212,224,0.18) 0%, transparent 60%),
+    var(--off-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--charcoal-light);
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a { color: var(--mocha); }
+.breadcrumb span { color: rgba(165,133,110,0.5); }
+
+/* --- About Grid --- */
+.about-main {
+  padding: var(--section-py) 0;
+  background: var(--white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+/* Profile Card */
+.profile-card {
+  background: var(--off-white);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border: 1px solid rgba(165,133,110,0.1);
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+.profile-avatar-lg {
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, var(--mocha), var(--ethereal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  box-shadow: 0 0 0 6px rgba(165,133,110,0.12);
+  animation: float 4s ease-in-out infinite;
+}
+
+.profile-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.profile-card .role {
+  font-size: 0.9rem;
+  color: var(--mocha);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.profile-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+  margin-bottom: 1.75rem;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--charcoal-light);
+}
+
+.contact-row .icon {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  background: var(--moonlit);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.profile-socials {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.profile-social-btn {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--moonlit);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.95rem;
+  color: var(--charcoal-light);
+  transition: var(--transition);
+}
+
+.profile-social-btn:hover {
+  background: var(--mocha);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+/* Timeline */
+.about-content h2 { margin-bottom: 0.5rem; }
+
+.education-timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin: 2rem 0 3rem;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 6px; bottom: 6px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--mocha), var(--ethereal));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.4rem;
+  top: 4px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--mocha);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 2px var(--mocha);
+}
+
+.timeline-year {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--mocha);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-item h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-item p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* Skills Grid */
+.skills-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 2rem 0 3rem;
+}
+
+.skill-detail-item {
+  background: var(--off-white);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  border: 1px solid rgba(165,133,110,0.08);
+  transition: var(--transition);
+}
+
+.skill-detail-item:hover {
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-3px);
+}
+
+.skill-detail-item .skill-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-detail-item .skill-pct {
+  color: var(--mocha);
+  font-size: 0.8rem;
+}
+
+/* Tools Section */
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.tool-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--off-white);
+  border: 1px solid rgba(165,133,110,0.12);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.tool-pill:hover {
+  background: var(--mocha);
+  color: var(--white);
+  border-color: var(--mocha);
+  transform: translateY(-2px);
+}
+
+/* Certificates */
+.certs-section {
+  padding: var(--section-py) 0;
+  background: var(--off-white);
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.cert-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  border-left: 4px solid transparent;
+}
+
+.cert-card:hover {
+  transform: translateX(6px);
+  border-left-color: var(--mocha);
+  box-shadow: var(--shadow-md);
+}
+
+.cert-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.cert-info h4 { margin-bottom: 0.3rem; }
+.cert-info p  { font-size: 0.85rem; }
+
+.cert-year {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--mocha);
+  font-weight: 600;
+  background: rgba(165,133,110,0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (min-width: 768px) {
+  .about-grid { grid-template-columns: 300px 1fr; }
+  .certs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .skills-detail-grid { grid-template-columns: repeat(3, 1fr); }
+}
