@@ -107,4 +107,4 @@ Or simply open `index.html` in any modern browser.
 
 ---
 
-© 2025 Malaika Shehzadi. All rights reserved.
+© 2026 Malaika Shehzadi. All rights reserved.
